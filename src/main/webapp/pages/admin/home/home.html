@@ -1,0 +1,41 @@
+<%
+DIRECTIVE SAFE_OUTPUT_OPEN;
+var headContent = {
+include("/pages/template/head.html"){}
+%>
+
+<script type="text/javascript">
+    var oper;
+    jQuery(function($) {
+        // 页面方法
+        oper = {
+            form : document.form1,
+            list : function() {
+                var url = 'admin/home';
+                this.form.action = url;
+                this.form.submit();
+            }
+        };
+        //显示Menu索引
+        showMenu('page_home');
+    });
+
+</script>
+
+<%
+};
+%>
+
+<%
+var bodyContent = {
+%>
+<!-- 菜单 -->
+<% include("/pages/template/menu.html"){} %>
+<br/><br/>
+<center>欢迎进入 XXXXXX 后台管理系统，如有相应需求与bug，可以联系系统管理员(454979901@qq.com)</center>
+
+<%}; %>
+
+<% layout("/pages/template/_layout.html",{head:headContent,body:bodyContent}){ %>
+DIRECTIVE SAFE_OUTPUT_CLOSE;
+<%} %>
