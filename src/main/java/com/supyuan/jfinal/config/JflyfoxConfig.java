@@ -60,6 +60,7 @@ public class JflyfoxConfig extends JFinalConfig {
 		me.setDevMode(isDevMode());
 		me.setViewType(ViewType.JSP); // 设置视图类型为Jsp，否则默认为FreeMarker
 		me.setLogFactory(new Log4jLogFactory());
+		System.out.println(">>" + Config.getStr("PAGES.404"));
 		me.setError401View(Config.getStr("PAGES.401"));
 		me.setError403View(Config.getStr("PAGES.403"));
 		me.setError404View(Config.getStr("PAGES.404"));
@@ -180,6 +181,7 @@ public class JflyfoxConfig extends JFinalConfig {
 	 * 配置处理器
 	 */
 	public void configHandler(Handlers me) {
+		System.out.println("##" + Config.getStr("PATH.BASE_PATH"));
 		// 全路径获取
 		me.add(new BasePathHandler(Config.getStr("PATH.BASE_PATH")));
 		// 根目录获取
