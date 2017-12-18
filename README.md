@@ -1,5 +1,5 @@
 ### jfinal-admin 后台框架 
-jfinal-admin 是基于JFinal的后台管理系统，采用了简洁强大的JFinal作为web框架，模板引擎用的是beetl，数据库用mysql，前端bootstrap框架。
+jfinal-admin 是基于JFinal的后台管理系统，采用了简洁强大的JFinal作为web框架，模板引擎用的是beetl，数据库用mysql，前端bootstrap框架。最新源码在这里[https://gitee.com/supyuan/jfinal-admin/tree/develop/]
 
 ### 特性
 1. 内置用户和权限系统
